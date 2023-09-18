@@ -1,11 +1,16 @@
-import br.senai.sp.jandira.model.criarTarefa;
+import br.senai.sp.jandira.model.Menu;
 
 public class Main {
     public static void main(String[] args) {
 
-        criarTarefa tarefa = new criarTarefa();
 
-        tarefa.criarTarefa();
+        Menu menu1 = new Menu();
+
+        menu1.Menu();
+
+
+
+
 
 
         }

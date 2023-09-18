@@ -1,18 +1,14 @@
 package br.senai.sp.jandira.model;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.Scanner;
 
 public class criarTarefa {
 
 
+    public String titulo, descricao, data, status;
 
     public void criarTarefa() {
-
-
-        String descricao, titulo, data;
 
 
         Scanner teclado = new Scanner(System.in);
@@ -22,17 +18,16 @@ public class criarTarefa {
         System.out.println("Descrição da Tarefa: ");
         descricao = teclado.nextLine();
         System.out.println("Data de vencimento da Tarefa: ");
-        data = teclado.nextLine();
+         data = teclado.nextLine();
+        System.out.println("Status da Tarefa (Concluída ou Pendente): ");
+         status = teclado.nextLine();
 
-        SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/yyyy");
+        System.out.println("------------ TAREFA ------------");
+        System.out.println("Nome: " + titulo);
+        System.out.println("Descrição: " + descricao);
+        System.out.println("Data: " + data);
+        System.out.println("Status: " + status);
 
-        try {
-
-            Date datanova = formatoData.parse(data);
-            System.out.println("Data de vencimento : " + datanova);
-        } catch (ParseException e) {
-            System.out.println("Formato de data Invalido.");
-        }
 
     }
 }
